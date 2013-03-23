@@ -45,6 +45,9 @@ let g:ctrlp_map = '<F3>'
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" set relativenumber
+set undofile
+
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
