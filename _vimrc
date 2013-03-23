@@ -305,6 +305,12 @@ let Tlist_Exit_OnlyWindow=1
 let Tlist_File_Fold_Auto_Close = 1
 nmap <leader>tt :TlistToggle<cr>
 
+""""" Settings for NERDTree
+let NERDTreeIgnore=['\~$', '^\.git', '\.swp$', '\.DS_Store$']
+let NERDTreeShowHidden=1
+nmap <leader>nn :NERDTreeToggle<cr>
+ 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vimgrep searching and cope displaying
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
