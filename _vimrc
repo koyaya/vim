@@ -1,6 +1,9 @@
 call pathogen#incubate()
 call pathogen#helptags()
 
+set autochdir
+let g:ctrlp_map = '<F3>'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: 
 "       Amir Salihefendic
