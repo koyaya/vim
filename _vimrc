@@ -252,6 +252,10 @@ map <leader>t<leader> :tabnext
 map <C-k> :tabn<cr>
 map <C-j> :tabp<cr>
 
+set switchbuf=usetab
+nnoremap <F9> :sbnext<CR>
+nnoremap <S-F9> :sbprevious<CR>
+
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
 map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
