@@ -2,7 +2,7 @@ call pathogen#incubate()
 call pathogen#helptags()
 
 set autochdir
-let g:ctrlp_map = '<F3>'
+
 
 
 "I cant remember a time when I didnt want to save a file after tabbing away from my editor (especially with version control and Vim’s persistent undo):
@@ -104,7 +104,7 @@ set so=7
 set wildmenu
 
 " Ignore compiled files
-set wildignore=*.o,*~,*.pyc
+set wildignore=*.o,*~,*.pyc,*.exe
 
 "Always show current position
 set ruler
@@ -258,7 +258,9 @@ nnoremap <S-F9> :sbprevious<CR>
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
-map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+map <F2> :tabedit <c-r>=expand("%:p:h")<cr><cr>
+" Advanced search for files using ctrlp
+let g:ctrlp_map = '<F3>'
 
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
