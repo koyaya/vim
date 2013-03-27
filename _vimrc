@@ -4,6 +4,24 @@ call pathogen#helptags()
 set autochdir
 let g:ctrlp_map = '<F3>'
 
+
+"I cant remember a time when I didnt want to save a file after tabbing away from my editor (especially with version control and Vim’s persistent undo):
+    au FocusLost * :wa
+
+
+"    New Vim users will want the following lines to teach them to do things right:
+
+    "nnoremap <up> <nop>
+    "nnoremap <down> <nop>
+    "nnoremap <left> <nop>
+    "nnoremap <right> <nop>
+    "inoremap <up> <nop>
+    "inoremap <down> <nop>
+    "inoremap <left> <nop>
+    "inoremap <right> <nop>
+    "nnoremap j gj
+    "nnoremap k gk
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: 
 "       Amir Salihefendic
@@ -52,9 +70,6 @@ set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
-
-" Press space to clear search highlighting and any message already displayed.
-nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -234,6 +249,8 @@ map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove 
 map <leader>t<leader> :tabnext 
+map <C-k> :tabn<cr>
+map <C-j> :tabp<cr>
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
@@ -298,7 +315,7 @@ autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
 nmap <F8> :TagbarToggle<CR>
 let g:tagbar_usearrows = 1
-nnoremap <leader>l :TagbarToggle<CR>
+nnoremap <leader>ll :TagbarToggle<CR>
 
 " ---------------------------------------------------------------------------
 "  """"" Settings for taglist.vim
