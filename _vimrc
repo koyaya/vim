@@ -261,7 +261,8 @@ nnoremap <S-F9> :sbprevious<CR>
 map <F2> :tabedit <c-r>=expand("%:p:h")<cr><cr>
 " Advanced search for files using ctrlp
 let g:ctrlp_map = '<F3>'
-
+" use MRU plugin that stores the list of most recently edited files
+nnoremap <leader><F2> :MRU<cr>
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
